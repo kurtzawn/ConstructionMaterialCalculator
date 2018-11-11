@@ -150,6 +150,7 @@ public class UIAddPrice extends JFrame {
 				// show success window
 				new UISuccess();
 			} catch(Exception ex) {
+				errGeneratingFileLabel.setForeground(Color.red);
 				errGeneratingFileLabel.setText("生成报价表，进货表，施工详单失败，无法将相应数据写入三张表");
 				System.out.println("ERR: Failure happens when clicking on outputResbtn in UIAddPrice Page, details below:");
 				ex.printStackTrace();

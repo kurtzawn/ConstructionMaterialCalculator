@@ -31,7 +31,7 @@ public class ReadExcel {
 			res.add(record);
 		}
 		
-		
+		workbook.close();
 		return res;
 	} 
 	

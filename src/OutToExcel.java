@@ -44,6 +44,7 @@ public class OutToExcel{
 		
 		OutputStream fileOut = new FileOutputStream(filename + "_施工详单.xls");
 		wb.write(fileOut);
+		fileOut.close();
 		wb.close();
 		System.out.println("Success: Construction detail file output successfully");
 	}
@@ -87,6 +88,7 @@ public class OutToExcel{
 		}
 		OutputStream fileOut = new FileOutputStream(filename + "_计算书.xls");
 		wb.write(fileOut);
+		fileOut.close();
 		wb.close();
 		System.out.println("Success: CheckList file output successfully");
 	}
@@ -135,6 +137,7 @@ public class OutToExcel{
 		
 		OutputStream fileOut = new FileOutputStream(filename + "_进货汇总表.xls");
 		wb.write(fileOut);
+		fileOut.close();
 		wb.close();
 		System.out.println("Success: Buying summarize file output successfully");
 
@@ -184,6 +187,7 @@ public class OutToExcel{
 		
 		OutputStream fileOut = new FileOutputStream(filename + "_报价汇总表.xls");
 		wb.write(fileOut);
+		fileOut.close();
 		wb.close();
 		System.out.println("Success: Selling summarize file output successfully");
 	}

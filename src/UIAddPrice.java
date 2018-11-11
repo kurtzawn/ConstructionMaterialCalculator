@@ -61,7 +61,7 @@ public class UIAddPrice extends JFrame {
 			boardPanel.add(sellpricestf[i]);
 			errorslabel[i] = new JLabel("");
 			errorslabel[i].setForeground(Color.red);
-	        errorslabel[i].setFont(new Font("Courier New", Font.ITALIC, 12));
+//	        errorslabel[i].setFont(new Font("Courier New", Font.ITALIC, 12));
 			boardPanel.add(errorslabel[i]);
 		}
 		
@@ -76,12 +76,12 @@ public class UIAddPrice extends JFrame {
 		boardPanel.add(lockerpriceselltf);
 		lockererrorlabel = new JLabel("");
 		lockererrorlabel.setForeground(Color.red);
-        lockererrorlabel.setFont(new Font("Courier New", Font.ITALIC, 12));
+//        lockererrorlabel.setFont(new Font("Courier New", Font.ITALIC, 12));
 		boardPanel.add(lockererrorlabel);
 
 		errGeneratingFileLabel = new JLabel("");
 		errGeneratingFileLabel.setForeground(Color.red);
-		errGeneratingFileLabel.setFont(new Font("Courier New", Font.ITALIC, 12));
+//		errGeneratingFileLabel.setFont(new Font("Courier New", Font.ITALIC, 12));
 		
 		
 		

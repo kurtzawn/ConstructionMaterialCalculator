@@ -33,11 +33,11 @@ public class UIAddRecord extends JFrame{
 	}
 	
 	//------------------------Event listeners-------------------------------
-	public class ClearEvent implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
-			clearForm();
-		}
-	}
+//	public class ClearEvent implements ActionListener {
+//		public void actionPerformed(ActionEvent e) {
+//			clearForm();
+//		}
+//	}
 	
 	public class SaveEvent implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
@@ -65,6 +65,7 @@ public class UIAddRecord extends JFrame{
 				UIAddRecord.super.dispose();  // close AddRecord frame
 				new UIAddPrice(rawRecords, filename);
 			} catch (Exception ex) {
+				errGeneratingFileLabel.setForeground(Color.red);
 				errGeneratingFileLabel.setText("计算书生成失败，无法将记录写入xls文件");
 				System.out.println("ERR: Failure happens when click on SumUp button on UIAddRecord Page, details below:");
 				ex.printStackTrace();
@@ -78,6 +79,7 @@ public class UIAddRecord extends JFrame{
 				OutToExcel.outCheckList(rawRecords, filename);
 				UIAddRecord.super.dispose();
 			} catch (Exception ex) {
+				errGeneratingFileLabel.setForeground(Color.red);
 				errGeneratingFileLabel.setText("计算书生成失败，无法将记录写入xls文件");
 				System.out.println("ERR: Failure happens when click on SaveAndQuit button on UIAddRecord Page, details below:");
 				ex.printStackTrace();
@@ -100,7 +102,7 @@ public class UIAddRecord extends JFrame{
 		for (int i = 0; i < errorlabels.length; i++) {
             errorlabels[i] = new JLabel("");
             errorlabels[i].setForeground(Color.red);
-            errorlabels[i].setFont(new Font("Courier New", Font.ITALIC, 12));
+//            errorlabels[i].setFont(new Font("Courier New", Font.ITALIC, 12));
 		}
 		
 		// add items
@@ -156,8 +158,8 @@ public class UIAddRecord extends JFrame{
 		savebtn = new JButton("保存当前条目");
 		panel.add(savebtn);
 		
-		clearbtn = new JButton("清空当前条目");
-		panel.add(clearbtn);
+//		clearbtn = new JButton("清空当前条目");
+//		panel.add(clearbtn);
 		
 		sumupbtn = new JButton("生成计算书并合计");
 		panel.add(sumupbtn);
@@ -166,8 +168,8 @@ public class UIAddRecord extends JFrame{
 		panel.add(snqbtn);
 		
 		// add button listener
-		ClearEvent eclear = new ClearEvent();
-		clearbtn.addActionListener(eclear);
+//		ClearEvent eclear = new ClearEvent();
+//		clearbtn.addActionListener(eclear);
 		
 		SaveEvent esave = new SaveEvent();
 		savebtn.addActionListener(esave);
